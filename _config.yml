@@ -32,3 +32,24 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+prints:
+  - modifier: dope
+    svg: svg/dope.svg
+    name: Dope
+
+colours:
+  - modifier: black
+    hex: black
+  - modifier: white
+    hex: white
+  - modifier: red
+    hex: red
+  - modifier: green
+    hex: green
+  - modifier: blue
+    hex: blue
+  - modifier: grey
+    hex: grey
+  - modifier: whitesmoke
+    hex: whitesmoke    

@@ -1,5 +1,3 @@
 ---
 layout: home
 ---
-
-# Supply Kickstarter
