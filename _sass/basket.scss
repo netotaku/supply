@@ -1,0 +1,26 @@
+.basket{
+  background: #fff;
+  position: fixed;
+  display: none;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+  &__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__content{
+    padding: 20px;
+    padding-top: 60px;
+  }
+}
+
+.button{
+  display: block;
+  background: rgba(0,0,0,.2);
+  padding: 6px 12px;
+  cursor: pointer;
+}

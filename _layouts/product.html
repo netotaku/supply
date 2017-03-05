@@ -2,10 +2,7 @@
 layout: default
 ---
 
-
 <div class="flex-container">
-
-
 
   <div class="theme theme--white flex-item">
     <div class="logo logo--fixed"><a href="/">{% include svg/supply-logo.svg %}</a></div>
@@ -16,14 +13,12 @@ layout: default
         </div>
       </div> <!-- /.print__inner -->
     </div> <!-- /.print -->
+    <div class="corner corner--top-right js-view-basket"></div> <!-- /.corner-top-right -->
   </div> <!-- /.theme -->
-
-
-
 
   <div class="footer flex-item">
     <div class="control control--left">
-      <div class="control__item js-change-design">
+      <div data-chosen="" class="control__item js-change-design">
         <div class="shirt control__item__icon">
           <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
           <div class="shirt__outline">{% include svg/shirt.svg %}</div>
@@ -34,7 +29,7 @@ layout: default
         </div>
         <span class="control__item__link theme__highlight">Change design</span>
       </div>
-      <div class="control__item js-change-colour">
+      <div data-chosen="" class="control__item js-change-colour">
         <div class="shirt control__item__icon">
           <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
           <div class="shirt__outline">{% include svg/shirt.svg %}</div>
@@ -42,7 +37,7 @@ layout: default
         </div>
         <span class="control__item__link theme__highlight">Change colour</span>
       </div>
-      <div class="control__item js-change-size">
+      <div data-chosen="" class="control__item js-change-size">
         <div class="shirt control__item__icon">
           <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
           <div class="shirt__outline">{% include svg/shirt.svg %}</div>
@@ -54,7 +49,7 @@ layout: default
         </div>
         <span class="control__item__link theme__highlight">Change size</span>
       </div>
-      <div class="control__item control__item--right js-change-size">
+      <div class="control__item control__item--right js-add-to-basket">
         <div class="control__item__icon">
           {% include svg/box-stretch.svg %}
           <div class="control__item__number">4</div>
@@ -66,9 +61,36 @@ layout: default
 
 </div>
 
-<!-- <div class="corner corner--top-right">
-  <a href="#" class="theme__highlight js-view-basket">View basket</a>
-</div> <!-- /.corner-top-right -->
+<div class="basket js-basket">
+  <div class="logo"><a href="/">{% include svg/supply-logo.svg %}</a></div>
+  <div class="basket__close button js-close-basket">Close</div>
+  <div class="basket__content">
+    <div class="basket__items js-basket-items"></div>
+  </div>
+</div>
+
+{% raw %}
+  <script type="html/template" id="js-basket-item-template">
+    <table width="100%" class="pure-table">
+      <thead>
+        <tr>
+          <th>Design</th>
+          <th>Colour</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#basket}}
+          <tr>
+            <td>{{ design }}</td>
+            <td>{{ colour }}</td>
+            <td>{{ size }}</td>
+          </tr>
+        {{/basket}}
+      </tbody>
+    </table>
+  </script>
+{% endraw %}
 
 <script id="colour-data">{{ site.colours | jsonify }}</script>
 <script id="size-data">{{ site.sizes | jsonify }}</script>

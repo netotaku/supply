@@ -10,6 +10,7 @@ var sizeChooser = (function(){
     var size = sizes[i];
     $heading.html(size.size);
     $subheading.html(size.label);
+    $chooser.data('chosen', size.size + ' ' + size.label);
   }
 
   setText(i);

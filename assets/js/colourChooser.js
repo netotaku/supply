@@ -1,8 +1,3 @@
-
-
-
-/////////
-
 var colourChooser = (function(){
 
   var colours = getdata('#colour-data'),
@@ -11,13 +6,25 @@ var colourChooser = (function(){
       $theme = $('.theme'),
       i = 0;
 
+  function setData(data){
+    $chooser.data('chosen', data.modifier);
+  }
+
+  setData(colours[i]);
+
   $chooser.on('click', function(e){
     e.stopPropagation();
+
+    var colour = colours[i = (++i >= colours.length) ? 0 : i];
+
     removeStupidBEMClass($theme, /(^|\s)theme--\S+/g);
     removeStupidBEMClass($fill, /(^|\s)shirt__fill__polygon--\S+/g);
-    var colour = colours[i = (++i >= colours.length) ? 0 : i];
+
+    setData(colour);
+
     $fill.addClass('shirt__fill__polygon--'+colour.modifier);
     $theme.addClass('theme--'+colour.modifier);
+
   });
 
 })();
