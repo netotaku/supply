@@ -14,7 +14,8 @@ var sizeChooser = (function(){
 
   setText(i);
 
-  $('.js-change-size').on('click', function(){
+  $('.js-change-size').on('click', function(e){
+    e.stopPropagation();
     setText(i = (++i >= sizes.length) ? 0 : i);
   });
 

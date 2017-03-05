@@ -12,7 +12,7 @@ var colourChooser = (function(){
       i = 0;
 
   $chooser.on('click', function(e){
-    e.preventDefault();
+    e.stopPropagation();
     removeStupidBEMClass($theme, /(^|\s)theme--\S+/g);
     removeStupidBEMClass($fill, /(^|\s)shirt__fill__polygon--\S+/g);
     var colour = colours[i = (++i >= colours.length) ? 0 : i];

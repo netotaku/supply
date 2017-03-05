@@ -3,76 +3,72 @@ layout: default
 ---
 
 
+<div class="flex-container">
 
-<div class="theme theme--white">
-  <div class="print">
+
+
+  <div class="theme theme--white flex-item">
     <div class="logo logo--fixed"><a href="/">{% include svg/supply-logo.svg %}</a></div>
-    <div class="print__inner">
-      <div class="print__container">
-        {% include prints.html %}
-      </div>
-    </div> <!-- /.print__inner -->
-  </div> <!-- /.print -->
-</div> <!-- /.theme -->
-
-
-  <!-- <div class="corner corner--top-right">
-    <a href="#" class="theme__highlight js-view-basket">View basket</a>
-  </div> <!-- /.corner-top-right -->
-
-<div class="footer">
-
-  <div class="control control--left">
-
-
-    <div class="control__item js-change-design">
-      <div class="shirt control__item__icon">
-        <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
-        <div class="shirt__outline">{% include svg/shirt.svg %}</div>
-        <div class="shirt__overlay shirt__overlay--print">
+    <div class="print">
+      <div class="print__inner">
+        <div class="print__container">
           {% include prints.html %}
         </div>
-        <div class="control__item__number">1</div>
-      </div>
-      <span class="control__item__link theme__highlight">Change design</span>
-    </div>
+      </div> <!-- /.print__inner -->
+    </div> <!-- /.print -->
+  </div> <!-- /.theme -->
 
-    <div class="control__item js-change-colour">
 
-      <div class="shirt control__item__icon">
-        <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
-        <div class="shirt__outline">{% include svg/shirt.svg %}</div>
-        <div class="control__item__number">2</div>
-      </div>
 
-      <span class="control__item__link theme__highlight">Change colour</span>
-    </div>
 
-    <div class="control__item js-change-size">
-
-      <div class="shirt control__item__icon">
-        <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
-        <div class="shirt__outline">{% include svg/shirt.svg %}</div>
-        <div class="shirt__overlay shirt__overlay--size">
-          <div class="shirt__overlay__heading js-size-heading">10-12</div>
-          <div class="js-size-subheading">Years</div>
+  <div class="footer flex-item">
+    <div class="control control--left">
+      <div class="control__item js-change-design">
+        <div class="shirt control__item__icon">
+          <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
+          <div class="shirt__outline">{% include svg/shirt.svg %}</div>
+          <div class="shirt__overlay shirt__overlay--print">
+            {% include prints.html %}
+          </div>
+          <div class="control__item__number">1</div>
         </div>
-        <div class="control__item__number">3</div>
+        <span class="control__item__link theme__highlight">Change design</span>
       </div>
-      <span class="control__item__link theme__highlight">Change size</span>
-    </div>
-
-    <div class="control__item control__item--right js-change-size">
-      <div class="control__item__icon">
-        {% include svg/box-stretch.svg %}
-        <div class="control__item__number">4</div>
+      <div class="control__item js-change-colour">
+        <div class="shirt control__item__icon">
+          <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
+          <div class="shirt__outline">{% include svg/shirt.svg %}</div>
+          <div class="control__item__number">2</div>
+        </div>
+        <span class="control__item__link theme__highlight">Change colour</span>
       </div>
-      <span class="control__item__link theme__highlight">Add to order</span>
-    </div>
-
-  </div> <!-- /.control -->
+      <div class="control__item js-change-size">
+        <div class="shirt control__item__icon">
+          <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
+          <div class="shirt__outline">{% include svg/shirt.svg %}</div>
+          <div class="shirt__overlay shirt__overlay--size">
+            <div class="shirt__overlay__heading js-size-heading">10-12</div>
+            <div class="js-size-subheading">Years</div>
+          </div>
+          <div class="control__item__number">3</div>
+        </div>
+        <span class="control__item__link theme__highlight">Change size</span>
+      </div>
+      <div class="control__item control__item--right js-change-size">
+        <div class="control__item__icon">
+          {% include svg/box-stretch.svg %}
+          <div class="control__item__number">4</div>
+        </div>
+        <span class="control__item__link theme__highlight">Add to order</span>
+      </div>
+    </div> <!-- /.control -->
+  </div>
 
 </div>
+
+<!-- <div class="corner corner--top-right">
+  <a href="#" class="theme__highlight js-view-basket">View basket</a>
+</div> <!-- /.corner-top-right -->
 
 <script id="colour-data">{{ site.colours | jsonify }}</script>
 <script id="size-data">{{ site.sizes | jsonify }}</script>

@@ -20,6 +20,18 @@
   background: #f5f5f5;
 }
 
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
+.flex-item {
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
 
 .theme__highlight{
   color: #000;
@@ -29,8 +41,6 @@
 
 .theme{
   height: 100%;
-
-
   {% for colour in site.colours %}
     &--{{ colour.modifier }} {
       background: {{ colour.primary }};

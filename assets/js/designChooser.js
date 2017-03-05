@@ -7,7 +7,7 @@ var designChooser = (function(){
   })
 
   $('.js-change-design').on('click', function(e){
-    e.preventDefault();
+    e.stopPropagation();
 
     $sliders.each(function(){
 
@@ -16,6 +16,8 @@ var designChooser = (function(){
           i = $('.is-active', $(this)).index();
 
       $($slides.removeClass('is-active').get(i = ++i >= $slides.length ? 0 : i)).addClass('is-active');
+
+      $(window).resize(); // hack
 
     });
 
