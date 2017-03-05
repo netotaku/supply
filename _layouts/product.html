@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="theme theme--white">
+  <div class="print">
+    <div class="print__inner">
+      <div class="logo logo--fixed"><a href="/">{% include svg/supply-logo.svg %}</a></div>
+      <div class="print__container">
+        <div class="print__slider js-print-slider">
+          {% for print in site.prints %}
+            {% assign svg = print.svg %}
+            <div class="print__slider__slide print__slide__slide--{{ print.modifier }} js-print-slide">{% include {{ svg }} %}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div> <!-- /.print__inner -->
+  </div> <!-- /.print -->
+  <div class="top-right">
+    <a href="#" class="theme__highlight js-view-basket">View basket</a>
+  </div>
+  <div class="bottom-right">
+    <a href="#" class="theme__highlight js-toggle-design">Press to choose a design</a>
+  </div>
+</div>

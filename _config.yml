@@ -37,19 +37,29 @@ prints:
   - modifier: dope
     svg: svg/dope.svg
     name: Dope
+  - modifier: battle-wax
+    svg: svg/battle-wax.svg
+    name: Battle Wax
 
 colours:
   - modifier: black
-    hex: black
+    primary: black
+    secondary: white
   - modifier: white
-    hex: white
+    primary: white
+    secondary: black
   - modifier: red
-    hex: red
+    primary: red
+    secondary: white
   - modifier: green
-    hex: green
+    primary: green
+    secondary: white
   - modifier: blue
-    hex: blue
+    primary: blue
+    secondary: white
   - modifier: grey
-    hex: grey
+    primary: grey
+    secondary: white
   - modifier: whitesmoke
-    hex: whitesmoke    
+    primary: whitesmoke
+    secondary: white
