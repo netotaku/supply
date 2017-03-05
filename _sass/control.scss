@@ -1,0 +1,10 @@
+.control{
+  position: relative;
+  overflow: hidden;
+  &__item{
+    cursor: pointer;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+  }
+}
