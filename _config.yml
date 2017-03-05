@@ -43,26 +43,23 @@ prints:
     name: Battle Wax
 
 colours:
-  - modifier: black
-    primary: black
-    secondary: white
   - modifier: white
     primary: white
     secondary: black
+  - modifier: black
+    primary: "#222222"
+    secondary: white
   - modifier: red
-    primary: red
+    primary: "#D0011B"
     secondary: white
   - modifier: green
-    primary: green
+    primary: "#7ED321"
     secondary: white
   - modifier: blue
-    primary: blue
+    primary: "#294F7B"
     secondary: white
   - modifier: grey
-    primary: grey
-    secondary: white
-  - modifier: whitesmoke
-    primary: whitesmoke
+    primary: "#969596"
     secondary: white
 
 sizes:

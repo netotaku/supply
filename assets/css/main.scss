@@ -21,3 +21,10 @@
     }
   {% endfor %}
 }
+
+
+{% for colour in site.colours %}
+  .shirt__fill__polygon--{{ colour.modifier }} {
+    fill: {{ colour.primary }};
+  }
+{% endfor %}
