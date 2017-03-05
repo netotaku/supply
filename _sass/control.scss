@@ -1,13 +1,22 @@
 .control{
   position: relative;
   overflow: hidden;
+  &__item:not(:first-child){
+
+  }
   &__item{
     cursor: pointer;
-    margin-right: 20px;
     float: left;
     text-align: center;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    &--right{
+      float: right;
+    }
     &__icon{
-      width: 120px;
+      position: relative;
     }
     &__number{
       position: absolute;
@@ -17,6 +26,20 @@
       top: 0px;
       left: 0px;
       width: 24px;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .control{
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 600px) {
+  .control{
+    &__item{
+      width: 140px;
     }
   }
 }

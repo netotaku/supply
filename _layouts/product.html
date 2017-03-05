@@ -17,9 +17,9 @@ layout: default
     <a href="#" class="theme__highlight js-view-basket">View basket</a>
   </div> <!-- /.corner-top-right -->
 
-  <div class="corner corner--bottom-left">
+  <div class="footer">
 
-    <div class="control">
+    <div class="control control--left">
 
 
       <div class="control__item js-change-design">
@@ -50,35 +50,26 @@ layout: default
         <div class="shirt control__item__icon">
           <div class="shirt__fill">{% include svg/shirt-colour.svg %}</div>
           <div class="shirt__outline">{% include svg/shirt.svg %}</div>
-          <div class="control__item__number">3</div>
-        </div>
-<!--
-        <div class="shirt">
-          {% include svg/shirt.svg %}
           <div class="shirt__overlay shirt__overlay--size">
             <div class="shirt__overlay__heading">XXL</div>
             <div class="">Adult</div>
           </div>
-        </div> -->
-
+          <div class="control__item__number">3</div>
+        </div>
         <span class="control__item__link theme__highlight">Change size</span>
       </div>
 
-    </div> <!-- /.control -->
-
-  </div>
-
-  <div class="corner corner--bottom-right">
-    <div class="control">
-      <div class="control__item js-change-size">
+      <div class="control__item control__item--right js-change-size">
         <div class="control__item__icon">
           {% include svg/box-stretch.svg %}
           <div class="control__item__number">4</div>
         </div>
         <span class="control__item__link theme__highlight">Add to order</span>
       </div>
-    </div>
-  </div> <!-- /.corner-bottom-right -->
+
+    </div> <!-- /.control -->
+
+  </div>
 
 </div> <!-- /.theme -->
 

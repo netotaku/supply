@@ -8,6 +8,18 @@
 @import "shirt";
 @import "control";
 
+.footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  background: #f5f5f5;
+}
+
 .theme{
   height: 100%;
   {% for colour in site.colours %}
