@@ -25,14 +25,9 @@
       font-weight: 700;
       top: 0px;
       left: 0px;
-      width: 24px;
+      width: 30px;
+      font-size: 1.2em;
     }
-  }
-}
-
-@media (min-width: 400px) {
-  .control{
-    font-size: 1em;
   }
 }
 
@@ -40,6 +35,10 @@
   .control{
     &__item{
       width: 140px;
+      &__number{
+        width: 24px;
+        font-size: 1em;
+      }
     }
   }
 }
