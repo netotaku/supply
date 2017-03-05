@@ -60,21 +60,26 @@ colours:
     secondary: white
   - modifier: grey
     primary: "#969596"
-    secondary: white
+    secondary: "#333333"
 
 sizes:
   - label: Adult
-    size:
-      - S
-      - M
-      - L
-      - XL
-      - XXL
-  - label: Kids
-    size:
-      - XS
-      - S
-      - M
-      - L
-      - XL
-      - XXL
+    size: L
+  - label: Adult
+    size: XL
+  - label: Adult
+    size: XXL
+  - label: Years
+    size: 2-3
+  - label: Years
+    size: 4-6
+  - label: Years
+    size: 6-8
+  - label: Years
+    size: 8-10
+  - label: Years
+    size: 10-12
+  - label: Adult
+    size: S
+  - label: Adult
+    size: M
