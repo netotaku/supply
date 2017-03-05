@@ -6,19 +6,54 @@ layout: default
     <div class="print__inner">
       <div class="logo logo--fixed"><a href="/">{% include svg/supply-logo.svg %}</a></div>
       <div class="print__container">
-        <div class="print__slider js-print-slider">
-          {% for print in site.prints %}
-            {% assign svg = print.svg %}
-            <div class="print__slider__slide print__slide__slide--{{ print.modifier }} js-print-slide">{% include {{ svg }} %}</div>
-          {% endfor %}
-        </div>
+        <!-- {% include prints.html %} -->
       </div>
     </div> <!-- /.print__inner -->
   </div> <!-- /.print -->
-  <div class="top-right">
+
+
+  <div class="corner corner--top-right">
     <a href="#" class="theme__highlight js-view-basket">View basket</a>
   </div>
-  <div class="bottom-right">
-    <a href="#" class="theme__highlight js-toggle-design">Press to choose a design</a>
+  <div class="corner corner--bottom-left">
+
+    <div class="control">
+
+      <div class="control__item js-change-design">
+        <div class="shirt">
+          {% include svg/shirt.svg %}
+          <div class="shirt__overlay shirt__overlay--print">
+            {% include prints.html %}
+          </div>
+        </div>
+        <span class="control__item__link theme__highlight">Change design</span>
+      </div>
+
+      <div class="control__item js-change-colour">
+        <div class="shirt">
+          {% include svg/shirt.svg %}
+        </div>
+        <span class="control__item__link theme__highlight">Change colour</span>
+      </div>
+
+      <div class="control__item js-change-size">
+        <div class="shirt">
+          {% include svg/shirt.svg %}
+          <div class="shirt__overlay shirt__overlay--size">
+            <div class="shirt__overlay__heading">XXL</div>
+            <div class="">Adult</div>
+          </div>
+        </div>
+        <span class="control__item__link theme__highlight">Change size</span>
+      </div>
+
+    </div>
+
   </div>
+  <div class="corner corner--bottom-right">
+    <a href="#" class="theme__highlight js-add-to-basket">Add to basket</a>
+  </div>
+
 </div>
+
+<script id="colour-data">{{ site.colours | jsonify }}</script>

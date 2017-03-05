@@ -8,6 +8,7 @@ html, body{
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(/assets/img/case3.png);
+  line-height: 1.6;
 }
 
 body {
@@ -17,6 +18,14 @@ body {
 
 a:hover{
   text-decoration: none;
+}
+
+.is-active{
+  display: block!important;
+}
+
+.is-hidden{
+  display: none;
 }
 
 .logo{
@@ -51,71 +60,71 @@ a:hover{
     vertical-align: middle;
   }
   &__container{
-    max-width: 650px;
+    max-width: 450px;
     margin: auto;
     padding: 50px;
   }
 
-  &__slider{
-    &__slide{
-      display: none;
+}
+
+.slider{
+  &__slide{
+    display: none;
+  }
+}
+
+.corner{
+  position: fixed;
+  &--top-right{
+    top: 20px;
+    right: 20px;
+  }
+  &--bottom-right{
+    bottom: 20px;
+    right: 20px;
+  }
+  &--bottom-left{
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+.control{
+  position: relative;
+  overflow: hidden;
+  &__item{
+    cursor: pointer;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+  }
+}
+
+.shirt{
+  width: 120px;
+  position: relative;
+  &__overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding-top: 20px;
+    line-height: 1;
+    font-size: .9em;
+    &--print{
+      padding-top: 24px;
+      margin-left: 34px;
+      margin-right: 34px;
+    }
+    &--size{
+      padding-top: 24px;
+    }
+    &__heading{
+      font-weight: 700;
+      font-size: 1.6em;
     }
   }
-
 }
-
-.is-active{
-  display: block;
-}
-
-.is-hidden{
-  display: none;
-}
-
-.top-right{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-.bottom-right{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-// .colours{
-//   position: absolute;
-//   margin: 0px;
-//   padding: 10px;
-//   top: 0px;
-//   left: 0px;
-//   &__list{
-//     padding: 0px;
-//     margin: 0px;
-//     &__colour{
-//       margin-bottom: 5px;
-//       &__link{
-//         $size: 30px;
-//         $border: 4px;
-//         text-indent: -9999px;
-//         display: block;
-//         // background: #fff;
-//         width: $size;
-//         height: $size;
-//         border-radius: ($size/2)+($border*2);
-//         border: solid $border #333;
-//
-//         {% for colour in site.colours %}
-//           &--{{ colour.modifier }} {
-//             background: {{ colour.hex }};
-//           }
-//         {% endfor %}
-//
-//       }
-//     }
-//   }
-// }
 
 .theme{
   height: 100%;

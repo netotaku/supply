@@ -33,6 +33,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+# Product stuff
 prints:
   - modifier: dope
     svg: svg/dope.svg
@@ -63,3 +64,20 @@ colours:
   - modifier: whitesmoke
     primary: whitesmoke
     secondary: white
+
+sizes:
+  - label: Adult
+    size:
+      - S
+      - M
+      - L
+      - XL
+      - XXL
+  - label: Kids
+    size:
+      - XS
+      - S
+      - M
+      - L
+      - XL
+      - XXL

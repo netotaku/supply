@@ -1,0 +1,6 @@
+<div class="slider js-print-slider">
+  {% for print in site.prints %}
+    {% assign svg = print.svg %}
+    <div class="slider__slide slider__slide--{{ print.modifier }} js-print-slide">{% include {{ svg }} %}</div>
+  {% endfor %}
+</div>

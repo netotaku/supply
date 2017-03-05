@@ -14,22 +14,41 @@ var param = function getUrlParameter(sParam) {
     }
 };
 
-var basket = (function(){
+//////
+
+var colourChooser = (function(){
+
+  var colours = JSON.parse($('#colour-data').html());
+  console.log(colours);
 
 })();
 
-var chooseDesign = (function(){
+//////
 
-  var $slider = $('.js-print-slider');
-      $slides = $('.js-print-slide', $slider);
+var designChooser = (function(){
 
-  $slides.first().addClass('is-active');
+  var $sliders = $('.js-print-slider');
 
-  $('.js-toggle-design').on('click', function(e){
+  $sliders.each(function(){
+    $('.js-print-slide', $(this)).first().addClass('is-active');
+  })
+
+  $('.js-change-design').on('click', function(e){
     e.preventDefault();
-    var i = $('.is-active', $slider).index();
-    i = ++i >= $slides.length ? 0 : i;
-    $($slides.removeClass('is-active').get(i)).addClass('is-active');
+
+    $sliders.each(function(){
+
+      var $this = $(this),
+          $slides = $('.js-print-slide', $this),
+          i = $('.is-active', $(this)).index();
+
+      i = ++i >= $slides.length ? 0 : i;
+
+      $($slides.removeClass('is-active').get(i)).addClass('is-active');
+
+    });
+
+
   });
 
 })();
